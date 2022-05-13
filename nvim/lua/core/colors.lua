@@ -14,7 +14,7 @@ end
 
 -- OneDark styles: dark, darker, cool, deep, warm, warmer, light
 require('onedark').setup {
-  style = 'darker',
+  style = 'light',
   colors = { fg = '#b2bbcc' }, --default: #a0a8b7
 }
 require('onedark').load()
@@ -34,6 +34,29 @@ M.onedark_dark = {
   yellow = '#e5c07b',
   orange = '#d19a66',
   red = '#e86671',
+}
+
+M.onedark_light = {
+  black = "#101012",
+  bg = "#fafafa",
+  fg = "#383a42",
+  purple = "#a626a4",
+  green = "#50a14f",
+  orange = "#c18401",
+  blue = "#4078f2",
+  yellow = "#986801",
+  cyan = "#0184bc",
+  red = "#e45649",
+  grey = "#a0a1a7",
+  light_grey = "#818387",
+  dark_cyan = "#2b5d63",
+  dark_red = "#833b3b",
+  dark_yellow = "#7c5c20",
+  dark_purple = "#79428a",
+  diff_add = "#282b26",
+  diff_delete = "#2a2626",
+  diff_change = "#1a2a37",
+  diff_text = "#2c485f",
 }
 
 -- Theme: Monokai (classic)
