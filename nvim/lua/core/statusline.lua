@@ -17,7 +17,8 @@ if not status_ok then
 end
 
 -- Set colorscheme (from core/colors.lua/colorscheme_name)
-local colors = require('core/colors').onedark_light
+-- local colors = require('core/colors').onedark_light
+local colors = require('core/colors').github_light
 
 local vi_mode_colors = {
   NORMAL = colors.cyan,

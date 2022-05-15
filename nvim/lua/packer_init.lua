@@ -71,6 +71,8 @@ return packer.startup(function(use)
   use 'navarasu/onedark.nvim'
   use 'tanvirtin/monokai.nvim'
   use { 'rose-pine/neovim', as = 'rose-pine' }
+  use 'folke/tokyonight.nvim'
+  use "projekt0n/github-nvim-theme"
 
   -- LSP
   use 'neovim/nvim-lspconfig'
