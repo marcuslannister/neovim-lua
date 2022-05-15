@@ -27,7 +27,7 @@ map('', '<right>', '<nop>')
 map('i', 'kk', '<Esc>')
 
 -- Clear search highlighting with <leader> and c
-map('n', '<leader>c', ':nohl<CR>')
+map('n', '<leader>h', ':nohl<CR>')
 
 -- Change split orientation
 map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
