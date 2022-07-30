@@ -122,6 +122,17 @@ return packer.startup(function(use)
   -- LeaderF
   use 'Yggdroot/LeaderF'
 
+  -- go
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua' -- recommanded if need floating window support
+
+  use({
+    'ray-x/navigator.lua',
+    requires = {
+        { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+        { 'neovim/nvim-lspconfig' },
+    },
+})
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
