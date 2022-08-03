@@ -84,4 +84,15 @@ map('n', '<leader>fh', ':Telescope help_tags<CR>')
 
 -- LeaderF
 map('n', '<leader>lgu', ':Leaderf gtags --update')
+map('n', '<leader>lm', ':LeaderfMru<CR>')
+map('n', '<leader>lf', ':LeaderfFunction!<CR>')
+map('n', '<leader>lb', ':LeaderfBuffer<CR>')
+map('n', '<leader>lt', ':LeaderfBufTag<CR>')
+
+map('n', '<leader>rg', ':<C-U><C-R>=printf("Leaderf! rg -e ")<CR>')
+-- search word under cursor, the pattern is treated as regex, and enter normal mode directly
+-- map('n', '<leader>rc', ':<C-U><C-R>=printf("Leaderf! rg -e %s -tc -tcpp", expand("<cword>"))<CR>')
+map('n', '<leader>rc', ':<C-U><C-R>=printf("Leaderf! rg -e %s -tc -tcpp", expand("<cword>"))<CR><CR>')
+
 map('n', '<leader>fd', ':<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>')
+
