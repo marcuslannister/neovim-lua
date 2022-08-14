@@ -74,7 +74,7 @@ map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
 -- kommentary
 vim.api.nvim_set_keymap("n", "<leader>cc", "<Plug>kommentary_line_default", {})
 vim.api.nvim_set_keymap("n", "<leader>c", "<Plug>kommentary_motion_default", {})
-vim.api.nvim_set_keymap("x", "<leader>c", "<Plug>kommentary_visual_default", {})
+vim.api.nvim_set_keymap("x", "<leader>c", "<Plug>kommentary_visual_default<C-c>", {})
 
 -- Telescope
 map('n', '<leader>ff', ':Telescope find_files<CR>')
@@ -95,4 +95,10 @@ map('n', '<leader>rg', ':<C-U><C-R>=printf("Leaderf! rg -e ")<CR>')
 map('n', '<leader>rc', ':<C-U><C-R>=printf("Leaderf! rg -e %s -tc -tcpp", expand("<cword>"))<CR><CR>')
 
 map('n', '<leader>fd', ':<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>')
+
+-- vim-easy-align
+-- Start interactive EasyAlign in visual mode (e.g. vipga)
+vim.api.nvim_set_keymap("x", "<leader>ga", "<Plug>EasyAlign", {})
+-- Start interactive EasyAlign for a motion/text object (e.g. gaip)
+vim.api.nvim_set_keymap("n", "<leader>ga", "<Plug>EasyAlign", {})
 

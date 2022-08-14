@@ -28,11 +28,29 @@ vim.a.tokyonight_colors = { hint = "orange", error = "#ff0000" } ]]
 -- Load the colorscheme
 -- vim.cmd[[colorscheme tokyonight]]
 
--- Github
-require("github-theme").setup({
-  theme_style = "light",
+-- material
+--[[ require("material").setup({
+  material_style = "Lighter",
+  -- other config
+}) ]]
+--[[ vim.g.material_style= "lighter" -- latte, frappe, macchiato, mocha
+require("material").setup()
+-- vim.cmd [[colorscheme material]]
+
+-- catppuccin
+vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
+require("catppuccin").setup({
+  catppuccin_flavour = "latte", -- latte, frappe, macchiato, mocha
+  -- catppuccin_flavour = "frappe", -- latte, frappe, macchiato, mocha
   -- other config
 })
+vim.cmd [[colorscheme catppuccin]]
+
+-- Github
+--[[ require("github-theme").setup({
+  theme_style = "light",
+  -- other config
+}) ]]
 
 -- statusline color schemes:
 -- import with: require('colors').colorscheme_name

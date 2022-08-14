@@ -73,6 +73,8 @@ return packer.startup(function(use)
   use { 'rose-pine/neovim', as = 'rose-pine' }
   use 'folke/tokyonight.nvim'
   use "projekt0n/github-nvim-theme"
+  use 'marko-cerovac/material.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -119,7 +121,14 @@ return packer.startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- LeaderF
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main"
+  })
+
+  use 'junegunn/vim-easy-align'
+
+  --[[ -- LeaderF
   use 'Yggdroot/LeaderF'
 
   -- go
@@ -132,7 +141,7 @@ return packer.startup(function(use)
         { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
         { 'neovim/nvim-lspconfig' },
     },
-})
+}) ]]
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
