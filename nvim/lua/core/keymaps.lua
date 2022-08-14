@@ -96,3 +96,9 @@ map('n', '<leader>rc', ':<C-U><C-R>=printf("Leaderf! rg -e %s -tc -tcpp", expand
 
 map('n', '<leader>fd', ':<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>')
 
+-- vim-easy-align
+-- Start interactive EasyAlign in visual mode (e.g. vipga)
+vim.api.nvim_set_keymap("x", "<leader>ga", "<Plug>EasyAlign", {})
+-- Start interactive EasyAlign for a motion/text object (e.g. gaip)
+vim.api.nvim_set_keymap("n", "<leader>ga", "<Plug>EasyAlign", {})
+

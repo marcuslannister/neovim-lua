@@ -126,6 +126,8 @@ return packer.startup(function(use)
     branch = "main"
   })
 
+  use 'junegunn/vim-easy-align'
+
   --[[ -- LeaderF
   use 'Yggdroot/LeaderF'
 
