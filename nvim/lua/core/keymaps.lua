@@ -78,9 +78,11 @@ vim.api.nvim_set_keymap("x", "<leader>c", "<Plug>kommentary_visual_default<C-c>"
 
 -- Telescope
 map('n', '<leader>ff', ':Telescope find_files<CR>')
-map('n', '<leader>fg', ':Telescope live_grep<CR>')
+-- map('n', '<leader>fg', ':Telescope live_grep<CR>')
 map('n', '<leader>fb', ':Telescope buffers<CR>')
 map('n', '<leader>fh', ':Telescope help_tags<CR>')
+map('n', '<leader>fc', ':Telescope grep_string<CR>')
+map('n', '<leader>fg', ':Telescope live_grep_args<CR>')
 
 -- LeaderF
 map('n', '<leader>lgu', ':Leaderf gtags --update')
