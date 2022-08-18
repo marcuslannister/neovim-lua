@@ -5,11 +5,6 @@
 -- Plugin: LeaderF
 -- url: https://github.com/Yggdroot/LeaderF
 
-local status_ok, leaderf = pcall(require, 'leaderf')
-if not status_ok then
-  return
-end
-
 -- Global options
 local g = vim.g
 
