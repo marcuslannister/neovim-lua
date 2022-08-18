@@ -55,6 +55,11 @@ map('n', '<leader>wo', '<C-w><C-o>')
 map('n', '<leader>wv', '<C-w><C-v>')
 map('n', '<leader>ww', '<C-w><C-w>')
 
+-- Setting
+map('n', '<leader>ed', ':e $HOME/.config/nvim/init.lua<CR>')
+map('n', '<leader>ep', ':e $HOME/.config/nvim/lua/packer_init.lua<CR>')
+map('n', '<leader>ek', ':e $HOME/.config/nvim/lua/core/keymaps.lua<CR>')
+
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
