@@ -136,10 +136,12 @@ return packer.startup(function(use)
 
   use 'junegunn/vim-easy-align'
 
-  --[[ -- LeaderF
-  use 'Yggdroot/LeaderF'
+  use 'MattesGroeger/vim-bookmarks'
 
-  -- go
+  -- LeaderF
+  -- use 'Yggdroot/LeaderF'
+
+  --[[ -- go
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua' -- recommanded if need floating window support
 
