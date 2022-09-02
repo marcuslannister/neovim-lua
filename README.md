@@ -129,7 +129,7 @@ mv ~/.config/nvim ~/.config/nvim.backup
 5. Download neovim-lua with `git` and copy the `nvim` folder in the `${HOME}/.config` directory:
 
 ```term
-git clone https://github.com/brainfucksec/neovim-lua.git
+git clone https://github.com/marcuslannister/neovim-lua.git
 cd neovim-lua/
 cp -Rv nvim ~/.config/
 ```
