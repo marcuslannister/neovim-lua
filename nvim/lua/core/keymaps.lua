@@ -2,8 +2,7 @@
 -- Define keymaps of Neovim and installed plugins.
 -----------------------------------------------------------
 
-local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
+local function map(mode, lhs, rhs, opts) local options = { noremap = true, silent = true }
   if opts then
     options = vim.tbl_extend('force', options, opts)
   end
@@ -112,4 +111,21 @@ map('n', '<leader>fd', ':<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", e
 vim.api.nvim_set_keymap("x", "<leader>ga", "<Plug>EasyAlign", {})
 -- Start interactive EasyAlign for a motion/text object (e.g. gaip)
 vim.api.nvim_set_keymap("n", "<leader>ga", "<Plug>EasyAlign", {})
+
+map('n', '<F5>', ':!python %<CR>')
+-- map('n', '<F5>', ':term python %<CR>')
+
+-- delete with not cut
+map('n', '<leader>d', '"_d')
+map('x', '<leader>d', '"_d')
+map('n', '<leader>dw', '"_dw')
+map('x', '<leader>dw', '"_dw')
+
+-- Copy the current word or visually selected text to the clipboard:
+map('n', '<F6>', '"+yiw')
+map('x', '<F6>', '"+y')
+
+-- Replace the current word or visually selected text with the clipboard contents:
+map('n', '<F7>', 'viw"+p')
+map('x', '<F7>', '"+p')
 
