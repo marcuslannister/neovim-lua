@@ -91,6 +91,7 @@ map('n', '<leader>fb', ':Telescope buffers<CR>')
 map('n', '<leader>fh', ':Telescope help_tags<CR>')
 map('n', '<leader>fc', ':Telescope grep_string<CR>')
 map('n', '<leader>fg', ':Telescope live_grep_args<CR>')
+map('n', '<leader>fl', ':Telescope lsp_document_symbols<CR>')
 
 -- LeaderF
 map('n', '<leader>lgu', ':Leaderf gtags --update')
