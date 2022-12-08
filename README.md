@@ -14,6 +14,7 @@ Neovim KISS configuration with Lua
 * [Installation](#installation)
 * [LSP Configuration](#lsp-configuration)
 * [Appearance](#appearance)
+* [Keymaps](#keymaps)
 * [Configuration Check](#configuration-check)
 * [Screenshots](#screenshots)
 
@@ -49,26 +50,7 @@ Neovim KISS configuration with Lua
 
 `${HOME}/.config/nvim`
 
-```
-├── lua
-│   ├── core
-│   │   ├── autocmds.lua
-│   │   ├── colors.lua
-│   │   ├── keymaps.lua
-│   │   ├── options.lua
-│   │   └── statusline.lua
-│   ├── plugins
-│   │   ├── alpha-nvim.lua
-│   │   ├── indent-blankline.lua
-│   │   ├── nvim-cmp.lua
-│   │   ├── nvim-lspconfig.lua
-│   │   ├── nvim-tree.lua
-│   │   └── nvim-treesitter.lua
-│   └── packer_init.lua
-├── plugin
-│   └── packer_compiled.lua
-└── init.lua
-```
+![alt text](img/dir-tree.png)
 
 ## Files and Settings
 
@@ -96,6 +78,10 @@ See: https://github.com/nanotee/nvim-lua-guide#where-to-put-lua-files
 
 * [statusline.lua](nvim/lua/core/statusline.lua): Statusline configuration file
 
+`/nvim/lua/lsp`
+
+* [lspconfig.lua](nvim/lua/lsp/lspconfig.lua): LSP configuration (language servers, keybinding)
+
 `/nvim/lua/plugins`
 
 * [packer.lua](nvim/lua/plugins/packer.lua): Plugin manager settings
@@ -106,19 +92,17 @@ See: https://github.com/nanotee/nvim-lua-guide#where-to-put-lua-files
 
 * [nvim-cmp.lua](nvim/lua/plugins/nvim-cmp.lua): Autocompletion settings
 
-* [nvim-lspconfig.lua](nvim/lua/plugins/nvim-lspconfig.lua): LSP configuration (language servers, keybinding)
-
 * [nvim-tree.lua](nvim/lua/plugins/nvim-tree.lua): File manager settings
 
 * [nvim-treesitter](nvim/lua/plugins/nvim-treesitter): Treesitter interface configuration
 
 ## Installation
 
-1. Install [Neovim v0.7.x](https://github.com/neovim/neovim/releases/latest).
+1. Install [Neovim v0.8.x](https://github.com/neovim/neovim/releases/latest).
 
 2. Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads), (for the font of the screenshots install [Cozette Font](https://github.com/slavfox/Cozette)).
 
-3. Install [npm](https://github.com/npm/cli) for download packages of LSP language servers, see: [LSP Configuration](#lsp-configuration).
+3. Install [Node.js - npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) for download packages of LSP language servers, see: [LSP Configuration](#lsp-configuration).
 
 4. Make a backup of your current `nvim` folder if necessary:
 
@@ -195,11 +179,11 @@ See: [nvim-lspconfig #doc/server_configurations.md](https://github.com/neovim/nv
 
 * [Rose Pine](https://github.com/rose-pine/neovim)
 
-**Fonts:** [Cozette](https://github.com/slavfox/Cozette)
+**Fonts:** See: [Installation](#installation)
 
 **Icons:** [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
 
-The color scheme is defined in the following files (default: OneDark):
+The color scheme (default: OneDark) is defined in the following files:
 
 * Neovim UI - [nvim/lua/core/colors.lua](nvim/lua/core/colors.lua):
 
@@ -212,12 +196,31 @@ require('onedark').setup {
 require('onedark').load()
 ```
 
-* Statusline - [nvim/lua/plugins/feline.lua](nvim/lua/plugins/feline.lua):
+* Statusline - [nvim/lua/core/statusline.lua](nvim/lua/core/statusline.lua):
 
 ```lua
 -- Set colorscheme (from core/colors.lua/colorscheme_name)
 local colors = require('core/colors').onedark_dark
 ```
+
+## Keymaps
+
+These are the default keymaps, in the following shortcuts, the `<leader>` key is set up to `,` (comma) character, see: [keymaps.lua](nvim/lua/core/keymaps.lua).
+
+| Shortcut             | Mode          | Description                                       |
+|----------------------|---------------|---------------------------------------------------|
+| `kk`                 | Insert        | Esc with `kk`                                     |
+| `<leader>c`          | Normal        | Clear search highlights                           |
+| `<F2>`               | Normal        | Toggle Paste mode                                 |
+| `<leader>tk/th`      | Normal        | Change split orientation (vertical/horizontal)    |
+| `<Ctrl> + {h,j,k,l}` | Normal        | Move around splits windows                        |
+| `<leader>r`          | Normal        | Reload configuration file                         |
+| `<leader>s`          | Normal        | Save file                                         |
+| `<leader>q`          | Normal        | Save (close all windows) and exit from Neovim     |
+| `<Ctrl> + t`         | Normal        | Open terminal (`:Term`)                           |
+| `<Esc>`              | Terminal      | Exit terminal                                     |
+| `<Ctrl> + n`         | Normal        | Open NvimTree                                     |
+| `<leader>z`          | Normal        | Open Tagbar                                       |
 
 ## Configuration check
 
@@ -249,28 +252,17 @@ See: `:help startuptime`
 
 **OneDark (darker)**
 
-![onedark_1](img/1-onedark_1.png)
-
-![onedark_2](img/2-onedark_2.png)
+![1-onedark.png](img/1-onedark.png)
 
 **Monokai**
 
-![monokai_1](img/3-monokai_1.png)
-
-![monokai_2](img/4-monokai_2.png)
+![2-monokai.png](img/2-monokai.png)
 
 **Rosé Pine**
 
-![rose-pine_1](img/5-rose-pine_1.png)
-
-![rose-pine_2](img/6-rose-pine_2.png)
+![3-rose-pine.png](img/3-rose-pine.png)
 
 </details>
-
-## TODO
-
-* Add support for Rust programming language.
-* Add another color scheme (not important).
 
 ## Guides and resources
 
@@ -306,6 +298,8 @@ See: `:help startuptime`
 
 This setup is based on [KISS](https://en.wikipedia.org/wiki/KISS_principle) principle, probably some concepts may not be valid for everyone. Then feel free to take what you need but **don't install anything without checking first!**
 
+This setup is not a Framework but it is the configuration I use to work on Linux, it can be used by default as it can be a start point to understand how Neovim is structured and maybe improve this config.
+
 ## Thanks to:
 
 - [All the contributors](https://github.com/brainfucksec/neovim-lua/graphs/contributors) who helped improve this setup with their reports and advices.
@@ -314,4 +308,3 @@ This setup is based on [KISS](https://en.wikipedia.org/wiki/KISS_principle) prin
 
 - The users of /r/Neovim subreddit for the support of the configuration.
 
-**Thanks to all the authors of the sources mentioned above, to all the others from whom I "stole" some configs and thanks to the users of /r/Neovim subreddit for the support of the configuration :)**

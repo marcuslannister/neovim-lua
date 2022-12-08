@@ -2,7 +2,8 @@
 -- Define keymaps of Neovim and installed plugins.
 -----------------------------------------------------------
 
-local function map(mode, lhs, rhs, opts) local options = { noremap = true, silent = true }
+local function map(mode, lhs, rhs, opts)
+  local options = { noremap=true, silent=true }
   if opts then
     options = vim.tbl_extend('force', options, opts)
   end
@@ -27,6 +28,10 @@ map('i', 'kk', '<Esc>')
 
 -- Clear search highlighting with <leader> and c
 map('n', '<leader>h', ':nohl<CR>')
+
+-- Toggle auto-indenting for code paste
+map('n', '<F2>', ':set invpaste paste?<CR>')
+vim.opt.pastetoggle = '<F2>'
 
 -- Toggle auto-indenting for code paste
 map('n', '<F2>', ':set invpaste paste?<CR>')

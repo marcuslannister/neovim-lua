@@ -47,7 +47,7 @@ opt.hidden = true           -- Enable background buffers
 opt.history = 100           -- Remember N lines in history
 opt.lazyredraw = true       -- Faster scrolling
 opt.synmaxcol = 240         -- Max column for syntax highlight
-opt.updatetime = 700        -- ms to wait for trigger an event
+opt.updatetime = 250        -- ms to wait for trigger an event
 
 -----------------------------------------------------------
 -- Startup
@@ -55,8 +55,8 @@ opt.updatetime = 700        -- ms to wait for trigger an event
 -- Disable nvim intro
 opt.shortmess:append "sI"
 
--- disable some builtin vim plugins
-local default_plugins = {
+-- -- Disable builtin plugins
+local disabled_built_ins = {
    "2html_plugin",
    "getscript",
    "getscriptPlugin",
@@ -84,6 +84,6 @@ local default_plugins = {
    "ftplugin",
 }
 
-for _, plugin in pairs(default_plugins) do
+for _, plugin in pairs(disabled_built_ins) do
    g["loaded_" .. plugin] = 1
 end
