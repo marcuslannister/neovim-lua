@@ -136,3 +136,32 @@ map('x', '<F6>', '"+y')
 map('n', '<F7>', 'viw"+p')
 map('x', '<F7>', '"+p')
 
+-- Tab
+map('n', '<leader>tn', ':tabnew<CR>')
+map('n', '<leader>tc', ':tabclose<CR>')
+-- map('n', '<F2>', ':tabp<CR>')
+-- map('n', '<F3>', ':tabn<CR>')
+
+map('n', '<M-1>', '1gt')
+map('n', '<M-2>', '2gt')
+map('n', '<M-3>', '3gt')
+map('n', '<M-4>', '4gt')
+map('n', '<M-5>', '5gt')
+map('n', '<M-6>', '6gt')
+map('n', '<M-7>', '7gt')
+map('n', '<M-8>', '8gt')
+map('n', '<M-9>', '9gt')
+
+-- bufferline
+-- 左右buffer切换
+map("n", "<F2>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<F3>", ":BufferLineCycleNext<CR>", opt)
+-- 关闭
+--"moll/vim-bbye"
+map("n", "<leader>bd", ":bdelete<CR>", opt)
+map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
+map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
+map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
+
+-- map('n', '<leader>bd', ':bdelete<CR>')
+

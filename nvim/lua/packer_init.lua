@@ -139,6 +139,19 @@ return packer.startup(function(use)
 
   use 'MattesGroeger/vim-bookmarks'
 
+  --bufferline
+  use {
+    'akinsho/bufferline.nvim', 
+    tag = "v3.*", 
+    requires = 'nvim-tree/nvim-web-devicons',
+    after = "catppuccin",
+    config = function()
+      require("bufferline").setup {
+        highlights = require("catppuccin.groups.integrations.bufferline").get()
+      }
+    end
+  }
+
   -- LeaderF
   -- use 'Yggdroot/LeaderF'
 
