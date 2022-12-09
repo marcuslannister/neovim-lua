@@ -1,8 +1,8 @@
 -- Global options
 local g = vim.g
 
---[[ g.bookmark_sign = '>>'
-g.bookmark_annotation_sign = '##' ]]
+g.bookmark_sign = '>>'
+g.bookmark_annotation_sign = '##'
 
 g.bookmark_save_per_working_dir = 1
 g.bookmark_auto_save = 1
