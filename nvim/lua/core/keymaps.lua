@@ -54,8 +54,9 @@ map('n', '<leader>r', ':so %<CR>')
 map('n', '<leader>w', ':w<CR>')
 map('i', '<leader>w', '<C-c>:w<CR>')
 
--- Close all windows and exit from Neovim with <leader> and q
-map('n', '<leader>q', ':qa!<CR>')
+-- Close all windows and exit from Neovim with <leader> and qq
+map('n', '<leader>qa', ':qa!<CR>')
+map('n', '<leader>qq', ':q<CR>')
 
 -- Manage window
 map('n', '<leader>wq', '<C-w><C-q>')
