@@ -5,10 +5,10 @@
 -- Plugin: lualine.nvim
 -- url: https://github.com/nvim-lualine/lualine.nvim
 
---[[ local status_ok, lualine = pcall(require, 'lualine')
+local status_ok, lualine = pcall(require, 'lualine')
 if not status_ok then
   return
-end ]]
+end
 
 require('lualine').setup {
   options = {
@@ -32,7 +32,13 @@ require('lualine').setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
+    lualine_c = {
+      'filename',
+      {
+        "lsp_progress",
+        spinner_symbols = { " ", " ", " ", " ", " ", " " },
+      },
+    },
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
