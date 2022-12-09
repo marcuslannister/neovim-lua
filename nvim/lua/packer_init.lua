@@ -94,6 +94,7 @@ return packer.startup(function(use)
       'saadparwaiz1/cmp_luasnip',
     },
   }
+  use "rafamadriz/friendly-snippets"
 
   -- Statusline
   use {
@@ -120,6 +121,8 @@ return packer.startup(function(use)
   -- comment
   use 'b3nj5m1n/kommentary'
 
+  use 'MattesGroeger/vim-bookmarks'
+
   -- telescope
   use {
     'nvim-telescope/telescope.nvim',
@@ -129,6 +132,7 @@ return packer.startup(function(use)
       require("telescope").load_extension("live_grep_args")
     end
   }
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
   use({
     "glepnir/lspsaga.nvim",
@@ -137,12 +141,10 @@ return packer.startup(function(use)
 
   use 'junegunn/vim-easy-align'
 
-  use 'MattesGroeger/vim-bookmarks'
-
   --bufferline
   use {
-    'akinsho/bufferline.nvim', 
-    tag = "v3.*", 
+    'akinsho/bufferline.nvim',
+    tag = "v3.*",
     requires = 'nvim-tree/nvim-web-devicons',
     after = "catppuccin",
     config = function()
