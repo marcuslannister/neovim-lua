@@ -24,4 +24,5 @@ require('plugins/alpha-nvim')
 -- require('plugins/navigator')
 require('plugins/lspsaga')
 require('plugins/vim-bookmarks')
+require('plugins/null-ls')
 
