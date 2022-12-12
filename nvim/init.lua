@@ -25,4 +25,5 @@ require('plugins/alpha-nvim')
 require('plugins/lspsaga')
 require('plugins/vim-bookmarks')
 require('plugins/null-ls')
+require('plugins/telescope')
 
