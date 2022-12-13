@@ -33,7 +33,6 @@ lualine.setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {
-      'filename',
       {
         "lsp_progress",
         spinner_symbols = { " ", " ", " ", " ", " ", " " },
@@ -51,7 +50,6 @@ lualine.setup {
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {},
   winbar = {},
   inactive_winbar = {},
   extensions = {}

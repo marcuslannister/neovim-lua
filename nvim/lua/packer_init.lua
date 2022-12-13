@@ -103,6 +103,9 @@ return packer.startup(function(use)
   }
   use("arkav/lualine-lsp-progress")
 
+  -- tab line
+  use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+
   -- git labels
   use {
     'lewis6991/gitsigns.nvim',
@@ -140,19 +143,6 @@ return packer.startup(function(use)
   })
 
   use 'junegunn/vim-easy-align'
-
-  --bufferline
-  use {
-    'akinsho/bufferline.nvim',
-    tag = "v3.*",
-    requires = 'nvim-tree/nvim-web-devicons',
-    after = "catppuccin",
-    config = function()
-      require("bufferline").setup {
-        highlights = require("catppuccin.groups.integrations.bufferline").get()
-      }
-    end
-  }
 
   use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 
