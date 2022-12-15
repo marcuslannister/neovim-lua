@@ -179,3 +179,7 @@ map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
 map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
 map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
+-- Git
+map('n', '<leader>go', ':G | only<CR>')
+map('n', '<leader>gvd', ':Gvdiffsplit<CR>')
+
