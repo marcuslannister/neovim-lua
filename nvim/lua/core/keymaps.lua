@@ -133,7 +133,7 @@ map('n', '<F7>', 'viw"+p')
 map('x', '<F7>', '"+p')
 
 -- buffer
-map("n", "<leader>bd", ":bdelete<CR>", opt)
+map("n", "<leader>bd", ":bdelete<CR>", opts)
 
 -- Tab
 map('n', '<leader>tn', ':tabnew<CR>')
