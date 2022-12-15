@@ -24,7 +24,7 @@ nvim_treesitter.setup {
     -- `false` will disable the whole extension
     enable = true,
   },
-  -- 启用增量选择模块
+  -- Enable incremental selection
   incremental_selection = {
     enable = true,
     keymaps = {
@@ -34,16 +34,16 @@ nvim_treesitter.setup {
       scope_incremental = "<TAB>",
     },
   },
-  -- 启用代码缩进模块 (=)
+  -- Eanble code indent (=)
   indent = {
     enable = true,
   },
 }
 
--- 开启 Folding 模块
+-- Eanble folding
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- 默认不要折叠
+-- Default to unfoled
 -- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
 vim.opt.foldlevel = 99
 
