@@ -149,6 +149,9 @@ return packer.startup(function(use)
   -- Git
   use 'tpope/vim-fugitive'
 
+  -- Obsidian
+  use 'epwalsh/obsidian.nvim'
+
   -- LeaderF
   -- use 'Yggdroot/LeaderF'
 
