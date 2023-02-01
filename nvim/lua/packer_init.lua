@@ -150,7 +150,7 @@ return packer.startup(function(use)
   use 'tpope/vim-fugitive'
 
   -- Obsidian
-  use 'epwalsh/obsidian.nvim'
+  use ({'epwalsh/obsidian.nvim', tag = "v1.*" })
 
   -- LeaderF
   -- use 'Yggdroot/LeaderF'
