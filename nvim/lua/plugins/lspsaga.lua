@@ -12,7 +12,7 @@ local saga = require 'lspsaga'
 kind[type_number][2] = icon -- see lua/lspsaga/lspkind.lua ]]
 
 -- use custom config
-saga.init_lsp_saga({
+saga.setup({
     -- put modified options in there
 
     -- Options with default value
