@@ -118,11 +118,16 @@ vim.api.nvim_set_keymap("n", "<leader>ga", "<Plug>EasyAlign", {})
 map('n', '<F5>', ':!python %<CR>')
 -- map('n', '<F5>', ':term python %<CR>')
 
--- delete with not cut
-map('n', '<leader>d', '"_d')
-map('x', '<leader>d', '"_d')
-map('n', '<leader>dw', '"_dw')
-map('x', '<leader>dw', '"_dw')
+-- d and x for delete
+map('n', 'x', '"_x')
+map('n', 'X', '"_X')
+map('n', 'd', '"_d')
+map('n', 'D', '"_D')
+map('x', 'd', '"_d')
+
+-- leader-d for cut
+map('n', '<leader>d', '"+d')
+map('x', '<leader>d', '"+d')
 
 -- Copy the current word or visually selected text to the clipboard:
 map('n', '<F6>', '"+yiw')
