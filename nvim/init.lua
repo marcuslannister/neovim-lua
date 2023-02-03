@@ -28,4 +28,5 @@ require('plugins/null-ls')
 require('plugins/telescope')
 require('plugins/tabline')
 require('plugins/obsidian')
+require('plugins/gitsigns')
 
