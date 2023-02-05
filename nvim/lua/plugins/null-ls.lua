@@ -10,13 +10,46 @@ if not status_ok then
   return
 end
 
+local formatting = null_ls.builtins.formatting
+
 null_ls.setup({
-    sources = {
-        null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.completion.spell,
-        null_ls.builtins.formatting.shfmt, -- shell script formatting
-    },
+  debug = false,
+  sources = {
+    -- Formatting ---------------------
+    --  brew install shfmt
+    formatting.shfmt,
+    -- StyLua
+    formatting.stylua,
+    -- frontend
+    formatting.prettier.with({
+      filetypes = {
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "css",
+        "scss",
+        "less",
+        "html",
+        "json",
+        "yaml",
+        "graphql",
+        "markdown",
+        "markdown.mdx"
+      },
+      prefer_local = "node_modules/.bin",
+    }),
+    -- formatting.fixjson,
+    -- formatting.black.with({ extra_args = { "--fast" } }),
+  },
+
+  -- auto format on save
+  on_attach = function(client)
+    if client.server_capabilities.document_formatting then
+      vim.cmd("autocmd BufWritePre <buffer> lua  vim.lsp.buf.format()")
+    end
+  end,
 })
 
 
