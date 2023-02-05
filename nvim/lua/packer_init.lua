@@ -73,7 +73,7 @@ return packer.startup(function(use)
 
   -- Color schemes
   -- use 'navarasu/onedark.nvim'
-  use 'tanvirtin/monokai.nvim'
+  -- use 'tanvirtin/monokai.nvim'
   -- use { 'rose-pine/neovim', as = 'rose-pine' }
   -- use 'folke/tokyonight.nvim'
   -- use "projekt0n/github-nvim-theme"
