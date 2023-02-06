@@ -38,6 +38,7 @@ nvim_treesitter.setup {
   -- Eanble code indent (=)
   indent = {
     enable = true,
+    disable = { 'yaml' }
   },
 }
 
