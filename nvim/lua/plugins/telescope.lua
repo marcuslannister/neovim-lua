@@ -10,6 +10,8 @@ if not status_ok then
   return
 end
 
+local z_utils = require("telescope._extensions.zoxide.utils")
+
 telescope.setup{
   defaults = {
     -- Default configuration for telescope goes here:
@@ -46,3 +48,7 @@ telescope.setup{
 
 -- Load the extension
 telescope.load_extension('live_grep_args')
+telescope.load_extension('zoxide')
+
+-- Add a mapping
+vim.keymap.set("n", "<leader>cd", telescope.extensions.zoxide.list)
