@@ -52,3 +52,17 @@ telescope.load_extension('zoxide')
 
 -- Add a mapping
 vim.keymap.set("n", "<leader>cd", telescope.extensions.zoxide.list)
+
+-----------------------------------------------------------
+-- grep word under cursor
+-- https://github.com/nvim-telescope/telescope-live-grep-args.nvim/pull/23/commits/482b21538af978ba2508ad1683600ed37033a294
+-- https://github.com/nvim-telescope/telescope-live-grep-args.nvim/issues/14
+-----------------------------------------------------------
+local live_grep_raw = require("telescope").extensions.live_grep_args
+
+grep_word_under_cursor = function ()
+  live_grep_raw.live_grep_raw({ default_text = vim.fn.expand("<cword>")})
+end
+
+vim.keymap.set("n", "<leader>rc", function() grep_word_under_cursor() end)
+

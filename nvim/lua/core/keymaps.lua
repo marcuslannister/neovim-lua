@@ -105,7 +105,7 @@ map('n', '<leader>lt', ':LeaderfBufTag<CR>')
 map('n', '<leader>rg', ':<C-U><C-R>=printf("Leaderf! rg -e ")<CR>')
 -- search word under cursor, the pattern is treated as regex, and enter normal mode directly
 -- map('n', '<leader>rc', ':<C-U><C-R>=printf("Leaderf! rg -e %s -tc -tcpp", expand("<cword>"))<CR>')
-map('n', '<leader>rc', ':<C-U><C-R>=printf("Leaderf! rg -e %s -tc -tcpp", expand("<cword>"))<CR><CR>')
+-- map('n', '<leader>rc', ':<C-U><C-R>=printf("Leaderf! rg -e %s -tc -tcpp", expand("<cword>"))<CR><CR>')
 
 map('n', '<leader>fd', ':<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>')
 
