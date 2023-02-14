@@ -29,4 +29,5 @@ require('plugins/telescope')
 require('plugins/tabline')
 require('plugins/obsidian')
 require('plugins/gitsigns')
+require('plugins/orgmode')
 

@@ -151,6 +151,9 @@ return packer.startup(function(use)
   -- Obsidian
   use ({'epwalsh/obsidian.nvim', tag = "v1.*" })
 
+  -- orgmode
+  use 'nvim-orgmode/orgmode'
+
   -- LeaderF
   -- use 'Yggdroot/LeaderF'
 
