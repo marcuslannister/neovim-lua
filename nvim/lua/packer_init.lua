@@ -154,6 +154,8 @@ return packer.startup(function(use)
   -- orgmode
   use 'nvim-orgmode/orgmode'
 
+  use 'Exafunction/codeium.vim'
+
   -- LeaderF
   -- use 'Yggdroot/LeaderF'
 
