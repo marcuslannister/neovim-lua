@@ -49,6 +49,8 @@ map('n', '<leader>r', ':so %<CR>')
 -- Fast saving with <leader> and w
 map('n', '<leader>w', ':w<CR>')
 map('i', '<leader>w', '<C-c>:w<CR>')
+map('n', '<leader>bs', ':w<CR>')
+map('i', '<leader>bs', '<C-c>:w<CR>')
 
 -- Close all windows and exit from Neovim with <leader> and qq
 map('n', '<leader>qa', ':qa!<CR>')
@@ -88,6 +90,7 @@ vim.api.nvim_set_keymap("x", "<leader>c", "<Plug>kommentary_visual_default<C-c>"
 
 -- Telescope
 map('n', '<leader>ff', ':Telescope find_files<CR>')
+map('n', '<leader>.', ':Telescope find_files<CR>')
 -- map('n', '<leader>fg', ':Telescope live_grep<CR>')
 map('n', '<leader>fb', ':Telescope buffers<CR>')
 map('n', '<leader>fh', ':Telescope help_tags<CR>')
