@@ -149,12 +149,12 @@ return packer.startup(function(use)
   use 'tpope/vim-fugitive'
 
   -- Obsidian
-  use ({'epwalsh/obsidian.nvim', tag = "v1.*" })
+  -- use ({'epwalsh/obsidian.nvim', tag = "v1.*" })
 
   -- orgmode
-  use 'nvim-orgmode/orgmode'
+  -- use 'nvim-orgmode/orgmode'
 
-  use 'Exafunction/codeium.vim'
+  -- use 'Exafunction/codeium.vim'
 
   -- LeaderF
   -- use 'Yggdroot/LeaderF'
